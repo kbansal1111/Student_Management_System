@@ -1,0 +1,46 @@
+{
+  "students": [
+    {
+      "name": "Aman Kumar",
+      "section": "A",
+      "marks": 78,
+      "grade": "B",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Riya Singh",
+      "section": "B",
+      "marks": 92,
+      "grade": "A"
+    },
+    {
+      "name": "Shivansh Singh",
+      "section": "A",
+      "marks": 89,
+      "grade": "A",
+      "id": 3
+    },
+    {
+      "name": "Devesh Singh",
+      "section": "B",
+      "marks": 68,
+      "grade": "C",
+      "id": 4
+    },
+    {
+      "name": "Prajwal Gupta",
+      "section": "C",
+      "marks": 76,
+      "grade": "B",
+      "id": 5
+    },
+    {
+      "name": "Om Raut",
+      "section": "B",
+      "marks": 58,
+      "grade": "D",
+      "id": 6
+    }
+  ]
+}

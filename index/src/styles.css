@@ -1,0 +1,278 @@
+/* GLOBAL */
+:root {
+  --bg: #f2f4f7;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+  --card-bg: #ffffff;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, Arial;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.app-root {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* HEADER */
+.header {
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.sub {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* CARD */
+.card {
+  background: var(--card-bg);
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-top: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* BUTTONS */
+.btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+  transition: 0.15s;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #f3f4f6;
+}
+
+.btn.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn.danger {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: white;
+}
+
+.btn.danger:hover {
+  background: var(--danger-hover);
+}
+
+.btn.small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+/* INPUT + SELECT */
+input,
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* SEARCH BAR */
+.search input {
+  width: 220px;
+}
+
+/* TOOLBAR */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filters label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* TABLE */
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.student-table th,
+.student-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.student-table thead th {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.student-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.actions-col {
+  width: 180px;
+}
+
+/* GRADE BADGES — simple clean colors */
+.grade-badge {
+  padding: 6px 10px;
+  font-weight: 700;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.grade-Aplus, .grade-Aplusplus {
+  background: #fde047;
+  color: #1f2937;
+}
+
+.grade-A {
+  background: #bbf7d0;
+  color: #1f2937;
+}
+
+.grade-B {
+  background: #bfdbfe;
+  color: #1f2937;
+}
+
+.grade-C {
+  background: #fed7aa;
+  color: #1f2937;
+}
+
+.grade-D {
+  background: #fecaca;
+  color: #1f2937;
+}
+
+.grade-F {
+  background: #fca5a5;
+  color: #1f2937;
+}
+
+/* FORM */
+.form-row {
+  margin-bottom: 14px;
+}
+
+.form-card label {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.form-card input {
+  width: 100%;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.error {
+  font-size: 12px;
+  color: var(--danger);
+  margin-top: 6px;
+}
+
+/* DETAILS */
+.details-card {
+  padding: 20px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+/* PAGINATION */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.page-controls select {
+  width: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search input {
+    width: 100%;
+  }
+}
